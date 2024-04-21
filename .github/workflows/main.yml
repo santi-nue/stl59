@@ -18,9 +18,10 @@ jobs:
 
       - uses: microsoft/setup-msbuild@v1
 
-
+      - uses: egor-tensin/vs-shell@v2
+      
       - name: Set up MSVC environment
-        run: .\sdk\vc\vcvarsall.bat x64
+        run: vcvarsall.bat x64
 
       
       - shell: cmd
