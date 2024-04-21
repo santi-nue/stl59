@@ -19,13 +19,11 @@ jobs:
 
       - uses: ilammy/msvc-dev-cmd@v1
     
-      
       - name: Set up MSVC environment
         shell: cmd
         run: |
           "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x64
 
-      
       - shell: cmd
         run: |
           d:
@@ -34,5 +32,15 @@ jobs:
           cl generate.c
           generate.exe
           
-    
-        
+      - name: Archive Release
+        uses: thedoctor0/zip-release@master
+        with:
+          type: "zip"
+          filename: exe-windows.zip
+          directory: D:\a\stl59\stl59\msvc
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          path: D:\a\stl59\stl59\msvc
+          name: exe-windows.zip
