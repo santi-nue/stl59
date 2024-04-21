@@ -28,6 +28,6 @@ jobs:
       
       - shell: cmd
         run: |
-          cl %HOME%/generate.c
+          cl generate.c
     
         
