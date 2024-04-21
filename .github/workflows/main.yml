@@ -28,7 +28,9 @@ jobs:
       
       - shell: cmd
         run: |
+          d:
           cd D:\a\stl59\stl59
+          dir
           cl generate.c
     
         
