@@ -1,0 +1,18 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Release CI
+
+on:
+  push:
+    
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  
+
+  build-and-release-windows:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: generate
+        run: cl generate.c
