@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <assert.h>
 
-#define BUFFER_SIZE 4096
+#define BUFFER_SIZE 8192
 
 SECURITY_ATTRIBUTES default_dir_security_attributes = {
 	sizeof(SECURITY_ATTRIBUTES), 0, true,
