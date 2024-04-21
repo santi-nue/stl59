@@ -15,4 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: generate
-        run: cl generate.c
+        shell: cmd
+        run: |
+          vcvarsall.bat
+          cl generate.c
