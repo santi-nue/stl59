@@ -32,5 +32,7 @@ jobs:
           cd D:\a\stl59\stl59
           dir
           cl generate.c
+          generate.exe
+          
     
         
