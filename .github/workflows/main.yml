@@ -15,17 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Append the directory of 'vcvarsall.bat' to PATH environment variable
-        uses: myci-actions/export-env-var-powershell@1
-        with:
-          name: PATH
-          value: $env:PATH;C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build
-      
-      - name: generate
 
-
-
-        shell: cmd
-        run: |
-          call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
-          rem cl generate.c
+      - uses: seanmiddleditch/gha-setup-vsdevenv@master
+      - run: |
+         cl generate.c
+    
+        
