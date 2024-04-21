@@ -17,6 +17,12 @@ jobs:
 
 
       - uses: microsoft/setup-msbuild@v1
+
+
+      - name: Set up MSVC environment
+        run: .\sdk\vc\vcvarsall.bat x64
+
+      
       - shell: cmd
         run: |
          cl generate.c
