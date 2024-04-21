@@ -22,6 +22,10 @@ jobs:
           value: $env:PATH;C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build
       
       - name: generate
+
+
+
+        shell: cmd
         run: |
-          vcvarsall.bat
-          cl generate.c
+          call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
+          ./cl generate.c
