@@ -18,7 +18,7 @@ jobs:
 
       - uses: microsoft/setup-msbuild@v1
       - shell: cmd
-      - run: |
+        run: |
          cl generate.c
     
         
