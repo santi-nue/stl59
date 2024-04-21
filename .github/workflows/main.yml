@@ -15,10 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: microsoft/setup-msbuild@v1.1
 
-      - uses: microsoft/setup-msbuild@v1
-
-      - uses: egor-tensin/vs-shell@v2
+      - uses: ilammy/msvc-dev-cmd@v1
+    
       
       - name: Set up MSVC environment
         run: vcvarsall.bat x64
